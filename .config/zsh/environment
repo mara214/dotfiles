@@ -1,3 +1,6 @@
+# nix
+source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
 # xdg
 export XDG_DESKTOP_DIR="$HOME/desktop"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
@@ -27,12 +30,15 @@ export CHKTEXRC="$HOME/.config/chktex"
 # libsodium
 unset SODIUM_LIB_DIR
 
+# rust
+export __CARGO_TEST_CHANNEL_OVERRIDE_DO_NOT_USE_THIS=nightly
+export CARGO_UNSTABLE_REGISTRY_AUTH=true
+
 # python
 export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/pythonrc
 export PYENV_ROOT="$HOME/.config/pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-which slap >/dev/null && eval "$(SLAP_SHADOW=true slap venv -i zsh)"
 
 # less
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
@@ -40,4 +46,3 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 # c
 export LDFLAGS="-L/opt/homebrew/lib $LDFLAGS"
 export DYLD_LIBRARY_PATH="/opt/homebrew/lib $DYLD_LIBRARY_PATH"
-
