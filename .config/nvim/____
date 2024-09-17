@@ -21,6 +21,7 @@ call plug#begin('~/.local/share/nvim/plug')
 
 " syntax support
 Plug 'rust-lang/rust.vim'
+"Plug 'mrcjkb/rustaceanvim'
 Plug 'LnL7/vim-nix'
 Plug 'ron-rs/ron.vim'
 Plug 'dense-analysis/ale'
@@ -30,6 +31,7 @@ Plug 'juliosueiras/vim-terraform-completion'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/fern-mapping-git.vim'
+Plug 'rainglow/vim'
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -107,7 +109,8 @@ call Base16hi("CursorLine",  "", g:base16_gui01, "", g:base16_cterm01, "", "")
 call Base16hi("Comment",     g:base16_gui09, "", g:base16_cterm09, "", "", "")
 call Base16hi("CocHintSign", g:base16_gui03, "", g:base16_cterm03, "", "", "")
 call Base16hi("NonText",     g:base16_gui01, "", g:base16_cterm01, "", "", "")
-call Base16hi("SpecialKey",  g:base16_gui01, "", g:base16_cterm01, "", "", "")
+"call Base16hi("SpecialKey",  g:base16_gui01, "", g:base16_cterm01, "", "", "")
+
 
 """""""""""""""""""""""""""""""""""""""""""
 " General :: Plugin Configuration
@@ -214,26 +217,6 @@ let g:lightline.active = {
 let g:rust_cargo_check_all_features = 1
 let g:rustfmt_autosave = 1
 
-" telescope
-lua << EOF
-require('telescope').setup {
-  defaults = {
-    initial_mode = "insert",
-    layout_strategy = "vertical",
-    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
-    mappings = {
-      i = {
-        ["<esc>"] = require('telescope.actions').close
-      },
-    },
-  },
-  pickers = {
-    buffers = {
-      sort_lastused = true
-    },
-  },
-}
-EOF
 
 " tidy home
 let $VIMHOME = $HOME."/.config/nvim/.vim"

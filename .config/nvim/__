@@ -1,6 +1,6 @@
 {
     "python.jediEnabled": true,
-    "rust-analyzer.inlayHints.enable": false,
+    "rust-analyzer.inlayHints.enable": true,
     "rust-analyzer.inlayHints.typeHintsSeparator": "> ",
     "rust-analyzer.inlayHints.chainingHintsSeparator": "> ",
     "rust-analyzer.checkOnSave": true,
@@ -9,7 +9,8 @@
     "snippets.extends": {
         "cpp": ["c"],
         "javascriptreact": ["javascript"],
-        "typescript": ["javascript"]
+        "typescript": ["javascript"],
+        "typescriptreact": ["javascript"]
     },
     "coc.preferences.formatOnSave": true,
     "prettier.tabWidth": 4,
