@@ -10,22 +10,21 @@ features = "all"
 extraArgs = [ "+nightly" ]
 
 [language.config.inlayHints]
-bindingModeHints.enable = false
-closingBraceHints.minLines = 10
+bindingModeHints.enable = true
+closingBraceHints.minLines = 1
 closureReturnTypeHints.enable = "with_block"
-discriminantHints.enable = "never"
-lifetimeElisionHints.enable = "never"
-typeHints.hideClosureInitialization = false
-typeHints.enable = false
-parameterHints.enable = false
+discriminantHints.enable = "always"
+lifetimeElisionHints.enable = "always"
+typeHints.hideClosureInitialization = true
+typeHints.enable = true
+parameterHints.enable = true
 
 [[language]]
 name = "python"
 rulers = [121]
+indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "typescript"
 rulers = [121]
-
-[language.config.inlayHints]
-includeInlayParameterNameHints = "none"
+indent = { tab-width = 4, unit = "    " }

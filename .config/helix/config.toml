@@ -23,7 +23,7 @@ mode.select = "⏸"
 
 [editor.indent-guides]
 render = true
-character =  "┆" #▏"▏", "|", "╎", "┆", "┊"
+character =  "▏" #▏"▏", "|", "╎", "┆", "┊" "┆""
 skip-levels = 1
 
 [keys.normal]
@@ -35,6 +35,7 @@ C-f = ":fmt"
 C-c = ":q"
 C-t = "toggle_comments"
 
+C-e = "file_picker"
 C-b = "buffer_picker"
 
 C-h = "select_prev_sibling"
